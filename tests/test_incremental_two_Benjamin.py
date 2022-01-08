@@ -3,7 +3,7 @@ from files.Menu import *
 from files.Board import *
 
 
-def test_invaild_Location():
+def test_invalid_Location():
     board=Board()
     checkboard=board.New_Board()
     result=place_building(board,"HWY","A6")
