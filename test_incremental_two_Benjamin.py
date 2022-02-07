@@ -7,24 +7,19 @@ def test_invalid_Location():
     board=Board()
     checkboard=board.New_Board()
     result=place_building(board,"HWY","A6")
-    assert result==False
+    assert result=="Invalid row"
 def test_Overlapping_Location():
     board=Board()
     checkboard=board.New_Board()
     building_choice(board,"A1","HWY")
     result=prevent_overlap(board,"A1","HWY")
-    assert result == False
+    assert result == "Overlap"
 def test_not_adjacent():
     board=Board()
     checkboard=board.New_Board()
     building_choice(board,"A1","HWY")
     result=check_adjacent(board, "A3","HWY")
-    assert result == False
-
-def test_ViewBuilding():
-        board=Board()
-        checkboard=board.New_Board()
-        display_remaining_building(board)
+    assert result == "No adjacent"
 
 def test_updatebuilding():
     board=Board()
